@@ -20,203 +20,137 @@
     <!--by using attribute data-role, value "page" in jQuery-->
     <!--This is the 1st page-->
     <div data-role="page" id="home">
-      <div data-role="header">
-        <h1>ATN COMPANY</h1>
-        <h1>CLOUD APPLICATION FOR SALE MANAGEMENT</h1>
-      </div>
-      <!-- /header -->
 
-      <div data-role="main" class="ui-content">
-        <a id="btnProduct" href="#product" class="ui-btn">Product</a>
-        <a id="btnCustomer" href="#customer" class="ui-btn">Customer</a>
-        <a id="btnInvoice" href="#invoice" class="ui-btn">Invoice</a>
-      </div>
-
-      <div data-role="footer" data-position="fixed">
-        <h4>Navigation</h4>
-        <div data-role="navbar">
-          <ul>
-            <li><a href="#home" data-role="button">Home</a></li>
-            <li><a href="#invoice" data-role="button">Invoice</a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- /footer -->
-    </div>
-    <!-- /page -->
-    <!-- END OF 1st PAGE-->
-
-    <div data-role="page" id="product">
-      <div data-role="header">
-        <h1>Home page</h1>
-      </div>
-      <!-- /header -->
-      <div data-role="main" class="ui-content">
-        <h2>PRODUCT</h2>
-        <p>This form is to add a product item</p>
-        <form id="myform" action="product.php" method="post">
-          <p>
-            <label for="productid">Product ID<sup>*</sup></label>
-            <input type="text" name="id" id="productid" />
-          </p>
-          <p>
-            <label for="productname">Product Name<sup>*</sup></label>
-            <input type="text" name="name" id="productname" />
-          </p>
-          <p>
-            <label for="productcat">Category</label>
-            <input type="text" name="cat" id="productcat" />
-          </p>
-
-          <p>
-            <label for="price">Price</label>
-            <input type="text" name="price" id="price" />
-          </p>
-
-          <p>
-            <label for="description">Descriptions<sup>*</sup></label>
-            <textarea
-              name="desc"
-              id="description"
-              rows="5"
-              cols="30"
-            ></textarea>
-          </p>
-          <input type="submit" value="Submit" />
-          <input type="reset" value="Reset" />
-        </form>
-      </div>
-      <!-- /content -->
-      <!--
-		<script>
-			$('#myform').on('submit', function (e) {
-
-				e.preventDefault();
-				$.ajax({
-				  method: "POST",
-				  url: "dbconnect.php",
-				  data:$("#myform").serialize(),
-					success: function(result){
-						console.log(result);
-					}
-				 });
-				
-			});
+		<div data-role="header">
+			<h1>Home page</h1>
+		</div><!-- /header -->
+		<div data-role="main" class="ui-content">
+			<p>Page content goes here.</p>
+			<div data-role="collapsible" data-collapsed="false">
+				<h4>This is a collapsible list items</h4>
+				<ul class="content-list" data-role="listview">
+					<li><a href="#">List item 1</a></li>
+					<li><a href="#">List item 2</a></li>
+					<li><a href="#">List item 3</a></li>
+				</ul>
+			</div>
 			
-		</script>
-		<script>
-			$(document).ready(function(){
-				$("#btnsubmit").click(function(){
-					//alert("Form being submitted");
-					$("#myform").submit();
-				});
-			});
-		</script>
-		-->
+			<!--			
+			<ul class="content-list">
+				<li><a href="#page2" >This is link 1</a></li>
+				<li><a href="#page3" >This is link 2</a></li>
+				   	
+			</ul>
+			-->
 
-      <div data-role="footer" data-position="fixed">
-        <h4>Page Footer</h4>
-        <div data-role="navbar">
-          <ul>
-            <li><a href="#home" data-role="button">Home</a></li>
-            <li><a href="#invoice" data-role="button">Invoice</a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- /footer -->
-    </div>
-    <!-- /page -->
+			<a id="btnAddApple" href="#" class="ui-btn ui-btn-inline">Add an Apple</a>
+			<button id="btnAddOrange" class="ui-btn ui-btn-inline">Add an Orange</button>
+		</div><!-- /content -->
 
-    <!--This is the 2nd page-->
-    <div data-role="page" id="invoice">
-      <div data-role="header">
-        <h1>PRODUCT</h1>
-      </div>
-      <!-- /header -->
+<script>
+	$(document).ready(function(){
+		//alert("The document is ready");
 
-      <div data-role="main" class="ui-content">
-        <p>Product content goes here.</p>
-        <p>This form is used to add a INVOICE item</p>
-        <form id="productform" action="product.php" method="post">
-          <p>
-            <label for="productid">Product ID<sup>*</sup></label>
-            <input type="text" name="id" id="productid" />
-          </p>
-          <p>
-            <label for="productname">Product Name<sup>*</sup></label>
-            <input type="text" name="name" id="productname" />
-          </p>
-          <p>
-            <label for="productcat">Category</label>
-            <input type="text" name="cat" id="productcat" />
-          </p>
+		//var newli = '<li><a href="" >The document is ready</a></li>';
+		//$("ul.content-list").append(newli);
+			
+		$("#btnAddApple").click(function(){
+			//alert("The button Add Apple is clicked");
+			var newli = '<li><a href="" >This is a link to Apple</a></li>';
+			$("ul.content-list").append(newli);
+			$("ul.content-list").listview("refresh");
+			
+		});
 
-          <p>
-            <label for="price">Price</label>
-            <input type="text" name="price" id="price" />
-          </p>
+		$("#btnAddOrange").click(function(){
+			//alert("The button Add Orange is clicked");
+			var newli = '<li><a href="" >This is a link to Orange</a></li>';
+			$("ul.content-list").append(newli).listview("refresh");
+		});
 
-          <p>
-            <label for="description">Descriptions<sup>*</sup></label>
-            <textarea
-              name="desc"
-              id="description"
-              rows="5"
-              cols="30"
-            ></textarea>
-          </p>
-          <input type="submit" value="Add this product" />
-          <input type="reset" value="Reset" />
-          <!--<input type="button" name="submit" id="submit" value="Submit Here">
-				-->
-        </form>
-      </div>
-      <!-- /content -->
 
-      <div data-role="footer" data-position="fixed">
-        <h4>Navigation</h4>
-        <div data-role="navbar">
-          <ul>
-            <li><a href="#home" data-role="button">Home</a></li>
-            <li><a href="#invoice" data-role="button">Invoice</a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- /footer -->
-    </div>
-    <!-- /page -->
+		
+	});
+</script>
+		<div id="rectangle" style="width:200px; height:100px;">
+		</div>
+		<a id="btnBlue" href="#" class="ui-btn ui-btn-inline">Blue</a>
+			<button id="btnRed" class="ui-btn ui-btn-inline">Red</button>
+<script>
+	$("#btnBlue").click(function(){
+			$("#rectangle").css({'background-color':'blue'});
+	});
 
-    <!--This is 3rd page-->
-    <div data-role="page" id="customer">
-      <div data-role="header">
-        <h1>CUSTOMER</h1>
-      </div>
-      <!-- /header -->
+	$("#btnRed").click(function(){
+			$("#rectangle").css({'background-color':'red'});
+	});
+</script>
+		<div data-role="footer" data-position="fixed">
+			<h4>Page Footer</h4>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-role="button">Page1</a></li>
+					<li><a href="#page2" data-role="button">Page2</a></li>
+				</ul>
+				
+			</div>
+			
+				  
+		</div><!-- /footer -->
+	</div><!-- /page -->
 
-      <div data-role="main" class="ui-content">
-        <p>Customer content goes here.</p>
-        <div data-role="collapsible" data-collapsed="false">
-          <h4>This is a collapsible list items</h4>
-          <ul data-role="listview">
-            <li><a href="#">List item 1</a></li>
-            <li><a href="#">List item 2</a></li>
-            <li><a href="#">List item 3</a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- /content -->
+	<!--This is the 2nd page-->
+	<div data-role="page" id="page2">
 
-      <div data-role="footer" data-position="fixed">
-        <h4>Navigation</h4>
-        <div data-role="navbar">
-          <ul>
-            <li><a href="#home" data-role="button">Home</a></li>
-            <li><a href="#invoice" data-role="button">Invoice</a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- /footer -->
-    </div>
-    <!-- /page -->
+		<div data-role="header">
+			<h1>Page 2</h1>
+		</div><!-- /header -->
+
+		<div data-role="main" class="ui-content">
+			<p>Page 2 content goes here.</p>
+			<img src="https://pmcvariety.files.wordpress.com/2019/07/david-beckham.jpg?w=1000&h=563&crop=1" width="100%" height="100%" border="1" alt="This is my image">
+			
+		</div><!-- /content -->
+
+		<div data-role="footer" data-position="fixed">
+			<h4>Page Footer</h4>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-role="button" >Page1</a></li>
+						<li><a href="#page2" data-role="button" >Page2</a></li>
+					</ul>
+				</div>  
+		</div><!-- /footer -->
+	</div><!-- /page -->
+
+	<!--This is 3rd page-->
+	<div data-role="page" id="page3">
+
+		<div data-role="header">
+			<h1>Page 3</h1>
+		</div><!-- /header -->
+
+		<div data-role="main" class="ui-content">
+			<p>Page 3 content goes here.</p>
+			<div data-role="collapsible" data-collapsed="false">
+		    <h4>This is a collapsible list items</h4>
+		    <ul data-role="listview">
+		        <li><a href="#">List item 1</a></li>
+		        <li><a href="#">List item 2</a></li>
+		        <li><a href="#">List item 3</a></li>
+		    </ul>
+		</div>
+		</div><!-- /content -->
+
+		<div data-role="footer" data-position="fixed">
+			<h4>Page Footer</h4>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="1.html" data-role="button" >Page1</a></li>
+						<li><a href="2.html" data-role="button" >Page2</a></li>
+					</ul>
+				</div>  
+		</div><!-- /footer -->
+	</div><!-- /page -->
   </body>
 </html>
