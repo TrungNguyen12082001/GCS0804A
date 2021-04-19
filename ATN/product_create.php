@@ -45,9 +45,7 @@
     }
     else{
         echo "SUCCESS: Connect to Heroku Postgres has been established";
-    }
-        
-    
+    }    
 ?>
 
 </body>
