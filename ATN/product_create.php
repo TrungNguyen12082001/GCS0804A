@@ -45,6 +45,17 @@
     }
     else{
         echo "SUCCESS: Connect to Heroku Postgres has been established";
+
+        $product_query = "INSERT INTO Product VALUES ('.$id.','.$name.','.$cat.','.$desc.','.$price.')";
+
+        echo '<p>'.$product_query.'</p>';
+
+        if (pg_query($connection,$product_query)){
+            echo '<p>SUCCESS: Record is adding successfully. A new product is created</p>';
+        }
+        else {
+            echo '<p>ERROR: Could not execute query</p>'
+        }
     }    
 ?>
 
