@@ -25,7 +25,7 @@
     $database = "d376etns70uqbq";
     $port = "5432";
     $user = "nwstpstfjuxqqt"
-    $pass = "ada43f72957d249213f980ade84286316d9d545d49ea3c2e70b97d62fe4770c4";
+    $password = "ada43f72957d249213f980ade84286316d9d545d49ea3c2e70b97d62fe4770c4";
     
 
     $host_param_str = "host=".$host;
