@@ -37,14 +37,14 @@
 
     $connection_string = $host_param_str.$dbname_param_str.$port_param_str.$user_param_str.$pass_param_str.$sslmode_param_str;
 
-    // $link = pg_connect($connection_string);
+    $link = pg_connect($connection_string);
 
-    // if($link === false){
-    //     die("ERROR: could not connect");
-    // }
-    // else
-    //     echo "SUCCESS: Connect to Heroku Postgres has been established"
-    echo "<p>".$connection_string."</p>";
+    if($link === false){
+        die("ERROR: could not connect");
+    }
+    else
+        echo "SUCCESS: Connect to Heroku Postgres has been established";
+    // echo "<p>".$connection_string."</p>";
 ?>
 
 </body>
