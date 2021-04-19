@@ -15,7 +15,7 @@
     $desc = $_REQUEST["desc"];
 
     echo $id;
-    echo $$name;
+    echo $name;
     echo $cat;
     echo $date;
     echo $price;
@@ -35,15 +35,16 @@
     $pass_param_str = " password=".$password;
     $sslmode_param_str = " ssl=require";
 
-    $connection_string = $host_param_str + $dbname_param_str + $port_param_str + $user_param_str + $pass_param_str + $sslmode_param_str;
+    // $connection_string = $host_param_str + $dbname_param_str + $port_param_str + $user_param_str + $pass_param_str + $sslmode_param_str;
 
-    $link = pg_connect($connection_string);
+    // $link = pg_connect($connection_string);
 
-    if($link === false){
-        die("ERROR: could not connect");
-    }
-    else
-        echo "SUCCESS: Connect to Heroku Postgres has been established"
+    // if($link === false){
+    //     die("ERROR: could not connect");
+    // }
+    // else
+    //     echo "SUCCESS: Connect to Heroku Postgres has been established"
+    echo "<p>".$connection_string."</p>";
 ?>
 
 </body>
