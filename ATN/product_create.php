@@ -24,7 +24,7 @@
     $host = "ec2-3-233-43-103.compute-1.amazonaws.com";
     $database = "d376etns70uqbq";
     $port = "5432";
-    $user = "nwstpstfjuxqqt"
+    $user = "nwstpstfjuxqqt";
     $password = "ada43f72957d249213f980ade84286316d9d545d49ea3c2e70b97d62fe4770c4";
     
 
