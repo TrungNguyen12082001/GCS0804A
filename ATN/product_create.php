@@ -26,14 +26,14 @@
     $port = "5432";
     $user = "nwstpstfjuxqqt"
     $pass = "ada43f72957d249213f980ade84286316d9d545d49ea3c2e70b97d62fe4770c4";
-    $ssl = "require";
+    
 
     $host_param_str = "host=".$host;
     $dbname_param_str = " dbname=".$database;
     $port_param_str = " port=".$port;
     $user_param_str = " user=".$user;
     $pass_param_str = " password=".$password;
-    $sslmode_param_str = " ssl=require";
+    $sslmode_param_str = " sslmode=require";
 
     $connection_string = $host_param_str.$dbname_param_str.$port_param_str.$user_param_str.$pass_param_str.$sslmode_param_str;
 
