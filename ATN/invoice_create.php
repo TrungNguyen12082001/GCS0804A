@@ -52,7 +52,7 @@
 
         $customer_query = 'INSERT INTO public."Customer"(id,Name,Email,Phone,Address) VALUES (\''.$cusid.'\',\''."Default".'\',\''."Default".'\',\''."Default".'\','."Default".')';
 
-        echo '<p>'.$product_query.'</p>';
+        echo '<p>'.$customer_query.'</p>';
 
         if (pg_query($connection,$customer_query)){
             echo '<p>SUCCESS: Record is adding successfully. A new customer is created</p>';
