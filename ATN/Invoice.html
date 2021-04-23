@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div data-role="page" id="atn_invoice">
+      <div data-role="header">
+        <h1>INVOICE - ATN COMPANY</h1>
+        <h1>PLEASE INPUT INVOICE HERE</h1>
+      </div>
+
+      <div data-role="main" class="ui-content">
+        <form action="invoice_create.php" method="post"></form>
+
+        <h3>Customer infomation</h3>
+        <p>
+          <label for="customerID">Customer ID</label>
+          <input type="text" name="customer_ID" id="customerID" />
+        </p>
+        <p>
+          <label for="customerName">Customer Name</label>
+          <input type="text" name="customer_Name" id="customerName" />
+        </p>
+
+        <h3>Invoice Information</h3>
+        <p>
+          <label for="invoiceID">Invoice ID</label>
+          <input type="text" name="invoice_ID" id="invoiceID" />
+        </p>
+        <p>
+          <label for="invoiceDate">Invoice Date</label>
+          <input type="text" name="invoice_Date" id="invoiceDate" />
+        </p>
+      </div>
+
+      <div data-role="collapsible" data-collapsed="false">
+        <h4>This is a collapsible list items</h4>
+        <ul class="content-list" data-role="listview"></ul>
+      </div>
+
+      <button id="btnAddProduct" class="ui-btn ui-btn-inline">
+        Add a product
+      </button>
+
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </div>
+  </body>
+</html>
