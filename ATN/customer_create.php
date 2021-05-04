@@ -44,11 +44,11 @@
     $pass_param_str = " password=".$password;
     $sslmode_param_str = " sslmode=require";
 
-    $connection_string = $host_param_str.$dbname_param_str.$port_param_str.$user_param_str.$pass_param_str.$sslmode_param_str;
+    $connection_string1 = $host_param_str.$dbname_param_str.$port_param_str.$user_param_str.$pass_param_str.$sslmode_param_str;
 
-    echo "<p>".$connection_string."</p>";
+    echo "<p>".$connection_string1."</p>";
 
-    $connection = pg_connect($connection_string);
+    $connection = pg_connect($connection_string1);
 
     if($connection === false){
         die("ERROR: could not connect");
