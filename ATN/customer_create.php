@@ -18,11 +18,11 @@
     // $invoice_product_id = $_REQUEST["invoice_productID"];
     // $invoice_product_quantity = $_REQUEST["invoice_productQuantity"];
 
-    echo "<p>".$cusid."</p>";
-    echo "<p>".$cusname."</p>";
-    echo "<p>".$cusemail."</p>";
-    echo "<p>".$cusphone."</p>";
-    echo "<p>".$cusaddress."</p>";
+    echo $cusid;
+    echo $cusname;
+    echo $cusemail;
+    echo $cusphone;
+    echo $cusaddress;
     // echo "<p>".$invoiceid."</p>";
     // echo "<p>".$invoicedate."</p>";
     
