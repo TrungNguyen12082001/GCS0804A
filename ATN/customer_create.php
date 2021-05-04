@@ -9,20 +9,26 @@
 <?php
     $cusid = $_REQUEST["customer_ID"];
     $cusname = $_REQUEST["customer_Name"];
-    $invoiceid = $_REQUEST["invoice_ID"];
-    $invoicedate = $_REQUEST["invoice_Date"];
+    $cusemail = $_REQUEST["customer_Email"];
+    $cusphone = $_REQUEST["customer_Phone"];
+    $cusaddress = $_REQUEST["customer_Address"];
+    // $invoiceid = $_REQUEST["invoice_ID"];
+    // $invoicedate = $_REQUEST["invoice_Date"];
     
-    $invoice_product_id = $_REQUEST["invoice_productID"];
-    $invoice_product_quantity = $_REQUEST["invoice_productQuantity"];
+    // $invoice_product_id = $_REQUEST["invoice_productID"];
+    // $invoice_product_quantity = $_REQUEST["invoice_productQuantity"];
 
     echo "<p>".$cusid."</p>";
     echo "<p>".$cusname."</p>";
-    echo "<p>".$invoiceid."</p>";
-    echo "<p>".$invoicedate."</p>";
+    echo "<p>".$cusemail."</p>";
+    echo "<p>".$cusphone."</p>";
+    echo "<p>".$cusaddress."</p>";
+    // echo "<p>".$invoiceid."</p>";
+    // echo "<p>".$invoicedate."</p>";
     
-    for($i = 0; $i <p count($invoice_product_id); $i++){
-        echo "</p>".$invoice_product_id[$i]."".$invoice_product_quantity[$i]."</p>";
-    }
+    // for($i = 0; $i <p count($invoice_product_id); $i++){
+    //     echo "</p>".$invoice_product_id[$i]."".$invoice_product_quantity[$i]."</p>";
+    // }
 
     $host = "ec2-3-233-43-103.compute-1.amazonaws.com";
     $database = "d376etns70uqbq";
@@ -50,7 +56,7 @@
     else{
         echo "SUCCESS: Connect to Heroku Postgres has been established";
 
-        $customer_query = 'INSERT INTO public."Customer"(id,Name,Email,Phone,Address) VALUES (\''.$cusid.'\',\''."Default".'\',\''."Default".'\',\''."Default".'\','."Default".')';
+        $customer_query = 'INSERT INTO public."Customer"(id,Name,Email,Phone,Address) VALUES (\''.$cusid.'\',\''.$cusname.'\',\''.$cusemail.'\',\''.$cusphone.'\','.$cusaddress.')';
 
         echo '<p>'.$customer_query.'</p>';
 
