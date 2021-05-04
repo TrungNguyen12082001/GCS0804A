@@ -44,13 +44,13 @@
     $pass_param_str = " password=".$password;
     $sslmode_param_str = " sslmode=require";
 
-    $connection_string1 = $host_param_str.$dbname_param_str.$port_param_str.$user_param_str.$pass_param_str.$sslmode_param_str;
+    $connection_string = $host_param_str.$dbname_param_str.$port_param_str.$user_param_str.$pass_param_str.$sslmode_param_str;
 
-    echo "<p>".$connection_string1."</p>";
+    echo "<p>".$connection_string."</p>";
 
-    $connection1 = pg_connect($connection_string1);
+    $connection = pg_connect($connection_string);
 
-    if($connection1 === false){
+    if($connection === false){
         die("ERROR: could not connect");
     }
     else{
@@ -60,7 +60,7 @@
 
         echo '<p>'.$customer_query.'</p>';
 
-        if (pg_query($connection1,$customer_query)){
+        if (pg_query($connection,$customer_query)){
             echo '<p>SUCCESS: Record is adding successfully. A new customer is created</p>';
         }
         else {
