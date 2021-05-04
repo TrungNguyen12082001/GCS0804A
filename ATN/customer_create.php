@@ -7,11 +7,11 @@
 ?>
 
 <?php
-    $cusid = $_REQUEST["customer_ID"];
-    $cusname = $_REQUEST["customer_Name"];
-    $cusemail = $_REQUEST["customer_Email"];
-    $cusphone = $_REQUEST["customer_Phone"];
-    $cusaddress = $_REQUEST["customer_Address"];
+    $cusid = $_REQUEST["id"];
+    $cusname = $_REQUEST["name"];
+    $cusemail = $_REQUEST["email"];
+    $cusphone = $_REQUEST["phone"];
+    $cusaddress = $_REQUEST["address"];
     // $invoiceid = $_REQUEST["invoice_ID"];
     // $invoicedate = $_REQUEST["invoice_Date"];
     
