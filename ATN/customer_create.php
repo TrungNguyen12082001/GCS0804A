@@ -48,9 +48,9 @@
 
     echo "<p>".$connection_string1."</p>";
 
-    $connection = pg_connect($connection_string1);
+    $connection1 = pg_connect($connection_string1);
 
-    if($connection === false){
+    if($connection1 === false){
         die("ERROR: could not connect");
     }
     else{
@@ -60,7 +60,7 @@
 
         echo '<p>'.$customer_query.'</p>';
 
-        if (pg_query($connection,$customer_query)){
+        if (pg_query($connection1,$customer_query)){
             echo '<p>SUCCESS: Record is adding successfully. A new customer is created</p>';
         }
         else {
