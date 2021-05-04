@@ -12,8 +12,8 @@
     $invoiceid = $_REQUEST["invoice_ID"];
     $invoicedate = $_REQUEST["invoice_Date"];
     
-    $invoice_product_id = $_REQUEST["invoice_productid"];
-    $invoice_product_quatity = $_REQUEST["invoice_product_quantity"];
+    $invoice_product_id = $_REQUEST["invoice_productID"];
+    $invoice_product_quantity = $_REQUEST["invoice_productQuantity"];
 
     echo "<p>".$cusid."</p>";
     echo "<p>".$cusname."</p>";
