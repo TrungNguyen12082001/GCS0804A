@@ -5,24 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="./jquery.mobile-1.4.5/jquery.mobile-1.4.5.css"
+    />
+    <script src="./jquery.mobile-1.4.5/jquery-2.2.4.min.js"></script>
+    <script src="./jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
   </head>
   <body>
-    <!-- <div data-role="page" id="atn_invoice">
-                 -->
-    <h1>INVOICE - ATN COMPANY</h1>
-    <h1>PLEASE INPUT INVOICE HERE</h1>
     <div data-role="main" class="ui-content">
       <form action="invoice_create.php" method="post">
-        <h3>Customer infomation</h3>
-        <p>
-          <label for="customerID">Customer ID</label>
-          <input type="text" name="customer_ID" id="customerID" />
-        </p>
-        <p>
-          <label for="customerName">Customer Name</label>
-          <input type="text" name="customer_Name" id="customerName" />
-        </p>
-
         <h3>Invoice Information</h3>
         <p>
           <label for="invoiceID">Invoice ID</label>
@@ -45,22 +38,23 @@
         <input type="submit" value="Submit" />
         <input type="reset" value="Reset" />
       </form>
-    </div>
-    <script>
-      $(document).ready(function () {
-        // alert("The document is ready");
 
-        // var newli = '<li><a href="" >The document is ready</a></li>';
-        // $("ul.content-list").append(newli);
+      <script>
+        $(document).ready(function () {
+          // alert("The document is ready");
 
-        $("#btnAddProduct").click(function () {
-          // alert("The button Add Apple is clicked");
-          var newli =
-            "<li>Product ID: <input name='invoice_productID' type='text'> Quantity: <input name= 'invoice_productQuantity' type='text'></li>";
-          $("ul.content-list").append(newli);
-          $("ul.content-list").listview("refresh");
+          // var newli = '<li><a href="" >The document is ready</a></li>';
+          // $("ul.content-list").append(newli);
+
+          $("#btnAddProduct").click(function () {
+            // alert("The button Add Apple is clicked");
+            var newli =
+              "<li>Product ID: <input name='invoice_productID' type='text'> Quantity: <input name= 'invoice_productQuantity' type='text'></li>";
+            $("ul.content-list").append(newli);
+            $("ul.content-list").listview("refresh");
+          });
         });
-      });
-    </script>
+      </script>
+    </div>
   </body>
 </html>

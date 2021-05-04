@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CUSTOMER PAGE</title>
+
+    <link
+      rel="stylesheet"
+      href="./jquery.mobile-1.4.5/jquery.mobile-1.4.5.css"
+    />
+    <script src="./jquery.mobile-1.4.5/jquery-2.2.4.min.js"></script>
+    <script src="./jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  </head>
+  <body>
+    <!-- <div data-role="page" id="atn_invoice">
+                 -->
+    <h1>INVOICE - ATN COMPANY</h1>
+    <h1>PLEASE INPUT INVOICE HERE</h1>
+    <div data-role="main" class="ui-content">
+      <form action="customer_create.php" method="post">
+        <h3>Customer infomation</h3>
+        <p>
+          <label for="customerID">Customer ID</label>
+          <input type="text" name="customer_ID" id="customerID" />
+        </p>
+
+        <p>
+          <label for="customerName">Customer Name</label>
+          <input type="text" name="customer_Name" id="customerName" />
+        </p>
+
+        <p>
+          <label for="customerEmail">Email</label>
+          <input type="text" name="customer_Email" id="customerEmail" />
+        </p>
+
+        <p>
+          <label for="customerPhone">Phone</label>
+          <input type="number" name="customer_Phone" id="customerPhone" />
+        </p>
+
+        <p>
+          <label for="customerAddress">Address</label>
+          <input type="text" name="customer_Address" id="customerAddress" />
+        </p>
+
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+      </form>
+    </div>
+  </body>
+</html>
