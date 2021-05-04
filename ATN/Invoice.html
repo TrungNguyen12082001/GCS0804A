@@ -18,12 +18,26 @@
       <form action="invoice_create.php" method="post">
         <h3>Invoice Information</h3>
         <p>
+          <label for="customerID">Customer ID</label>
+          <input type="text" name="id" id="customerID" />
+        </p>
+
+        <p>
+          <label for="customerName">Customer Name</label>
+          <input type="text" name="name" id="customerName" />
+        </p>
+
+        <p>
+          <label for="customerEmail">Email</label>
+          <input type="text" name="email" id="customerEmail" />
+        </p>
+        <p>
           <label for="invoiceID">Invoice ID</label>
           <input type="text" name="invoice_ID" id="invoiceID" />
         </p>
         <p>
           <label for="invoiceDate">Invoice Date</label>
-          <input type="text" name="invoice_Date" id="invoiceDate" />
+          <input type="date" name="invoice_Date" id="invoiceDate" />
         </p>
 
         <div data-role="collapsible" data-collapsed="false">
