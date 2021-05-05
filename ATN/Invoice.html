@@ -45,7 +45,11 @@
           <ul class="content-list" data-role="listview"></ul>
         </div>
 
-        <button id="btnAddProduct" class="ui-btn ui-btn-inline">
+        <button
+          id="btnAddProduct"
+          class="ui-btn ui-btn-inline"
+          onclick="addProduct()"
+        >
           Add a product
         </button>
 
@@ -54,20 +58,49 @@
       </form>
 
       <script>
-        $(document).ready(function () {
-          // alert("The document is ready");
+        // // alert("The document is ready");
 
-          // var newli = '<li><a href="" >The document is ready</a></li>';
-          // $("ul.content-list").append(newli);
+        // // var newli = '<li><a href="" >The document is ready</a></li>';
+        // // $("ul.content-list").append(newli);
 
-          $("#btnAddProduct").click(function () {
-            // alert("The button Add Apple is clicked");
-            var newli =
-              "<li>Product ID: <input name='invoice_productID' type='text'> Quantity: <input name= 'invoice_productQuantity' type='text'></li>";
-            $("ul.content-list").append(newli);
-            $("ul.content-list").listview("refresh");
+        // $("#btnAddProduct").click(function addProduct() {
+        //   // alert("The button Add Apple is clicked");
+
+        //   var newli =
+        //     "<li>Product ID: <input name='invoice_productID' type='text'> Quantity: <input name= 'invoice_productQuantity' type='text'></li>";
+        //   $("ul.content-list").append(newli);
+        //   $("ul.content-list").listview("refresh");
+        // });
+
+        function addProduct(i) {
+          var n = i;
+          var newLi =
+            '<li id = "' +
+            n +
+            '"' +
+            '> Product ID: <input name="invoice_productID" type="text" onfocusout="updateProductName(this.value)"> <label style="display:inline-block;"></label> Quantity: <input name="invoice_productQuantity" type="text"> <button id="remove' +
+            '"' +
+            'class="ui-btn ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right">Remove</button></li>';
+
+          $("ul.content-list").append(newLi);
+          $("#remove" + n).click(function () {
+            var lieLement = document.getElementById(n);
+            lieLement.remove();
           });
-        });
+          i++;
+          $("ul.content-list").listview("refresh");
+        }
+
+        // function updateProductName(value) {
+        //   var xhttp;
+        //   event.target.nextElementSibling.setAttribute("id",value);
+        //   if (value == "") {
+        //     document.getElementById(value).innerHTML = "";
+        //     return;
+        //   }
+
+        //   xhttp = new
+        // }
       </script>
     </div>
 
