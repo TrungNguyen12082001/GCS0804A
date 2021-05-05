@@ -72,22 +72,31 @@
         //   $("ul.content-list").listview("refresh");
         // });
 
-        function addProduct(i) {
-          var n = i;
-          var newLi =
-            '<li id = "' +
-            n +
-            '"' +
-            '> Product ID: <input name="invoice_productID" type="text" onfocusout="updateProductName(this.value)"> <label style="display:inline-block;"></label> Quantity: <input name="invoice_productQuantity" type="text"> <button id="remove' +
-            '"' +
-            'class="ui-btn ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right">Remove</button></li>';
+        function addProduct() {
+          // var i = 0;
+          // var n = i;
+          // var newLi =
+          //   '<li id = "' +
+          //   n +
+          //   '"' +
+          //   '> Product ID: <input name="invoice_productID" type="text" onfocusout="updateProductName(this.value)"> <label style="display:inline-block;"></label> Quantity: <input name="invoice_productQuantity" type="text"> <button id="remove' +
+          //   '"' +
+          //   'class="ui-btn ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-right">Remove</button></li>';
+
+          var newLi = `
+            <li>
+              Product ID: <input name = "invoice_productID" type = "text">
+              Quantity: <input name = "invoice_productQuantity" type = "text"> 
+              <button id="remove">Remove</button>
+            </li>
+          `;
 
           $("ul.content-list").append(newLi);
-          $("#remove" + n).click(function () {
-            var lieLement = document.getElementById(n);
-            lieLement.remove();
-          });
-          i++;
+          // $("#remove").click(function () {
+          //   var lieLement = document.getElementById(n);
+          //   lieLement.remove();
+          // });
+          //i++;
           $("ul.content-list").listview("refresh");
         }
 
