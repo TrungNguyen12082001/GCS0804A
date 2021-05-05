@@ -7,23 +7,34 @@
 ?>
 
 <?php
-    
+    $cusid = $_REQUEST["customer_ID"];
+    $cusname = $_REQUEST["customer_Name"];
+    $cusemail = $_REQUEST["customer_Email"]
     $invoiceid = $_REQUEST["invoice_ID"];
     $invoicedate = $_REQUEST["invoice_Date"];
     
     $invoice_product_id = $_REQUEST["invoice_productID"];
     $invoice_product_quantity = $_REQUEST["invoice_productQuantity"];
-
+    
+    
+    echo $cusid;
+    echo $cusname;
+    echo $cusemail;
     echo $invoiceid;
     echo $invoicedate;
+
     echo $invoice_product_id;
     echo $invoice_product_quantity;
     
-    echo "<p>".$invoiceid."</p>";
-    echo "<p>".$invoicedate."</p>";
-    
-    for($i = 0; $i <p count($invoice_product_id); $i++){
-        echo "</p>".$invoice_product_id[$i]."".$invoice_product_quantity[$i]."</p>";
+    $product_id = "";
+    for ($i = 0; $i < count($invoice_product_id); $i++){
+        $product_id .= $invoice_product_id[$i].","; 
+        // echo "</p>".$invoice_product_id[$i]."".$invoice_product_quantity[$i]."</p>";
+    }
+
+    $product_quantity = "";
+    for ($i = 0; $i < count($invoice_product_quantity); $i++){
+        $product_quantity .= $invoice_product_quantity[$i].",";
     }
 
     $host = "ec2-3-233-43-103.compute-1.amazonaws.com";
@@ -52,12 +63,12 @@
     else{
         echo "SUCCESS: Connect to Heroku Postgres has been established";
 
-        $invoice_query = 'INSERT INTO public."Customer"("id","Name","Email","Phone","Address") VALUES (\''.$cusid.'\',\''.$cusname.'\',\''.$cusemail.'\',\''.$cusphone.'\',\''.$cusaddress.'\')';
+        $invoice_query = 'INSERT INTO public."Invoice"("cusId","cusName","cusEmail","invoiceID","invoicedDate","invoiceProductID","invoiceProductQuantity") VALUES (\''.$cusid.'\',\''.$cusname.'\',\''.$cusemail.'\',\''.$invoiceid.'\',\''.$invoicedate.'\',\''.$invoice_product_id.'\',\''.$invoice_product_quantity.'\')';
 
-        echo '<p>'.$customer_query.'</p>';
+        echo '<>'.$invoice_query.'</>';
 
-        if (pg_query($connection,$customer_query)){
-            echo '<p>SUCCESS: Record is adding successfully. A new customer is created</p>';
+        if (pg_query($connection,$invoice_query)){
+            echo '<p>SUCCESS: Record is adding successfully. A new invoice is created</p>';
         }
         else {
             echo '<p>ERROR: Could not execute query</p>';
