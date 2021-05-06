@@ -45,11 +45,7 @@
           <ul class="content-list" data-role="listview"></ul>
         </div>
 
-        <button
-          id="btnAddProduct"
-          class="ui-btn ui-btn-inline"
-          onclick="addProduct()"
-        >
+        <button id="btnAddProduct" class="ui-btn ui-btn-inline">
           Add a product
         </button>
 
@@ -72,18 +68,32 @@
         //   $("ul.content-list").listview("refresh");
         // });
 
-        function addProduct() {
-          var newLi = `
-            <li>
-              Product ID: <input name = "invoice_productID" type = "text">
-              Quantity: <input name = "invoice_productQuantity" type = "text"> 
-              <button id="remove">Remove</button>
-            </li>
-          `;
+        // function addProduct() {
+        //   var newLi = `
+        //     <li>
+        //       Product ID: <input name = "invoice_productID" type = "text">
+        //       Quantity: <input name = "invoice_productQuantity" type = "text">
+        //       <button id="remove">Remove</button>
+        //     </li>
+        //   `;
 
-          $("ul.content-list").append(newLi);
-          $("ul.content-list").listview("refresh");
-        }
+        //   $("ul.content-list").append(newLi);
+        //   $("ul.content-list").listview("refresh");
+        // }
+
+        $(document).ready(function () {
+          $("#btnAddProduct").click(function () {
+            var newLi = `
+             <li>
+               Product ID: <input name = "invoice_productID" type = "text">
+               Quantity: <input name = "invoice_productQuantity" type = "text"> 
+               <button id="remove">Remove</button>
+             </li>
+        `;
+            $("ul.content-list").append(newLi);
+            $("ul.content-list").listview("refresh");
+          });
+        });
       </script>
     </div>
 
