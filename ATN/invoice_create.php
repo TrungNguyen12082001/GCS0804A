@@ -9,7 +9,7 @@
 <?php
     $cusid = $_REQUEST["customer_ID"];
     $cusname = $_REQUEST["customer_Name"];
-    $cusemail = $_REQUEST["customer_Email"]
+    $cusemail = $_REQUEST["customer_Email"];
     $invoiceid = $_REQUEST["invoice_ID"];
     $invoicedate = $_REQUEST["invoice_Date"];
     
