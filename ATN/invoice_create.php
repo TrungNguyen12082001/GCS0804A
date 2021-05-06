@@ -2,9 +2,6 @@
 <html>
 <body>
 
-<?php
-    echo "This file is ";
-?>
 
 <?php
     $cusid = $_REQUEST["customer_ID"];
