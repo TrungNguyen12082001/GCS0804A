@@ -58,6 +58,20 @@
       </form>
 
       <script>
+        // // alert("The document is ready");
+
+        // // var newli = '<li><a href="" >The document is ready</a></li>';
+        // // $("ul.content-list").append(newli);
+
+        // $("#btnAddProduct").click(function addProduct() {
+        //   // alert("The button Add Apple is clicked");
+
+        //   var newli =
+        //     "<li>Product ID: <input name='invoice_productID' type='text'> Quantity: <input name= 'invoice_productQuantity' type='text'></li>";
+        //   $("ul.content-list").append(newli);
+        //   $("ul.content-list").listview("refresh");
+        // });
+
         function addProduct() {
           var newLi = `
             <li>
