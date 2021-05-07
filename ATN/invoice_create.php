@@ -23,13 +23,13 @@
     echo $invoice_product_id;
     echo $invoice_product_quantity;
     
-    $product_id = "";
+    $product_id = [];
     for ($i = 0; $i < count($invoice_product_id); $i++){
         $product_id .= $invoice_product_id[$i].","; 
         // echo "</p>".$invoice_product_id[$i]."".$invoice_product_quantity[$i]."</p>";
     }
 
-    $product_quantity = "";
+    $product_quantity = [];
     for ($i = 0; $i < count($invoice_product_quantity); $i++){
         $product_quantity .= $invoice_product_quantity[$i].",";
     }
