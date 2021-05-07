@@ -48,17 +48,6 @@
         <input type="submit" value="Submit" />
         <input type="reset" value="Reset" />
       </form>
-
-      <div data-role="footer" data-position="fixed">
-        <h4>Navigation</h4>
-        <div data-role="navbar">
-          <ul>
-            <li><a href="Products.html" data-role="button">Products</a></li>
-            <li><a href="Customers.html" data-role="button">Customer</a></li>
-          </ul>
-        </div>
-      </div>
-
       <button class="ui-btn ui-btn-inline" onclick="addProduct()">
         Add a product
       </button>
@@ -81,8 +70,8 @@
         function addProduct() {
           var newLi = `
             <li>
-              Product ID: <input name = "invoice_productID[]" type = "text">
-              Quantity: <input name = "invoice_productQuantity[]" type = "text">
+              Product ID: <input name = "invoice_productID" type = "text">
+              Quantity: <input name = "invoice_productQuantity" type = "text">
               <button id="remove">Remove</button>
             </li>
           `;
@@ -105,6 +94,16 @@
         //   });
         // });
       </script>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+      <h4>Navigation</h4>
+      <div data-role="navbar">
+        <ul>
+          <li><a href="Products.html" data-role="button">Products</a></li>
+          <li><a href="Customers.html" data-role="button">Customer</a></li>
+        </ul>
+      </div>
     </div>
   </body>
 </html>
