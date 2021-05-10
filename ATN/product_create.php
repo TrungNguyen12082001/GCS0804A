@@ -2,9 +2,7 @@
 <html>
 <body>
 
-<?php
-    echo "This file is ";
-?>
+
 
 <?php
     $id = $_REQUEST["id"];
@@ -62,3 +60,5 @@
 
 </body>
 </html>
+
+

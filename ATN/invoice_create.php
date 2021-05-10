@@ -2,7 +2,6 @@
 <html>
 <body>
 
-
 <?php
     $cusid = $_REQUEST["customer_ID"];
     $cusname = $_REQUEST["customer_Name"];
@@ -26,7 +25,6 @@
     $product_id = "";
     for ($i = 0; $i < count($invoice_product_id); $i++){
         $product_id .= $invoice_product_id[$i].","; 
-        // echo "</p>".$invoice_product_id[$i]."".$invoice_product_quantity[$i]."</p>";
     }
 
     $product_quantity = "";

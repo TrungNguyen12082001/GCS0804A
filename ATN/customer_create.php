@@ -3,32 +3,17 @@
 <body>
 
 <?php
-    echo "This file is ";
-?>
-
-<?php
     $cusid = $_REQUEST["id"];
     $cusname = $_REQUEST["name"];
     $cusemail = $_REQUEST["email"];
     $cusphone = $_REQUEST["phone"];
     $cusaddress = $_REQUEST["address"];
-    // $invoiceid = $_REQUEST["invoice_ID"];
-    // $invoicedate = $_REQUEST["invoice_Date"];
-    
-    // $invoice_product_id = $_REQUEST["invoice_productID"];
-    // $invoice_product_quantity = $_REQUEST["invoice_productQuantity"];
 
     echo $cusid;
     echo $cusname;
     echo $cusemail;
     echo $cusphone;
     echo $cusaddress;
-    // echo "<p>".$invoiceid."</p>";
-    // echo "<p>".$invoicedate."</p>";
-    
-    // for($i = 0; $i <p count($invoice_product_id); $i++){
-    //     echo "</p>".$invoice_product_id[$i]."".$invoice_product_quantity[$i]."</p>";
-    // }
 
     $host = "ec2-3-233-43-103.compute-1.amazonaws.com";
     $database = "d376etns70uqbq";
